@@ -14,8 +14,7 @@ export class AppComponent implements OnInit {
   }
 
   onContentChange(data: {content: string}){
-    this.markdown = data.content;
-    console.log(this.markdown)
+    this.markdown = marked(data.content);
   }
 
 }
