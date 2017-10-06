@@ -7,14 +7,15 @@ import * as marked from 'marked';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-
+  markdown = ""
 
   ngOnInit(){
     console.log(marked('I am using __markdown__.'));
   }
 
   onContentChange(data: {content: string}){
-    console.log(data.content);
+    this.markdown = data.content;
+    console.log(this.markdown)
   }
 
 }
